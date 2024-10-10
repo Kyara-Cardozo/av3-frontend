@@ -18,6 +18,7 @@ export default function Home() {
     // Função para tirar o foco do input, tirar a visibilidade do placeholder e fechar o menu lateral
     const handleBlur = () => {
         const input = document.querySelector('.input_search') as HTMLInputElement;
+        input.value = '';
         input.blur();
         setPlaceholderVisible(false);
         setOpen(false);
@@ -73,7 +74,7 @@ export default function Home() {
                         </div>
 
                         <div className="mt-7 flex flex-col gap-2">
-                            <div className="flex flex-col gap-3 ml-[4px]">
+                            <div className="flex flex-col gap-3 ml-[-5px]">
                                 {links.map((link, idx) => (
                                     <SidebarLink
                                         key={idx}
@@ -85,7 +86,7 @@ export default function Home() {
                         
                     </div>
 
-                    <div className="flex flex-col items-start gap-2 pl-[9px] mb-5">
+                    <div className="flex flex-col items-start gap-2 pl-[8px] mb-5">
                         <SidebarLink
                             link={{
                                 label: "Sair",
