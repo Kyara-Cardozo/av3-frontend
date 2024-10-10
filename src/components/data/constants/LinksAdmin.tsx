@@ -1,4 +1,4 @@
-import { Icon, IconArrowLeft, IconBrandTabler, IconChairDirector, IconDashboard, IconLibrary, IconSettings, IconUserBolt, IconUsersGroup } from "@tabler/icons-react";
+import { IconChairDirector, IconHome, IconLogout, IconUsersGroup } from "@tabler/icons-react";
 
 const links = [
     {
@@ -18,7 +18,7 @@ const links = [
       label: "Dashboard",
       href: "#",
       icon: 
-        <IconDashboard className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+        <IconHome className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
     },
 ];
 
