@@ -71,6 +71,7 @@ export default function Home() {
                                 `}
                             />
                         </div>
+
                         <div className="mt-7 flex flex-col gap-2">
                             <div className="flex flex-col gap-3 ml-[4px]">
                                 {links.map((link, idx) => (
@@ -84,7 +85,7 @@ export default function Home() {
                         
                     </div>
 
-                    <div className="flex flex-col items-start gap-2 pl-[14px] mb-5">
+                    <div className="flex flex-col items-start gap-2 pl-[9px] mb-5">
                         <SidebarLink
                             link={{
                                 label: "Sair",

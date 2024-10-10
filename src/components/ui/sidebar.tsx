@@ -115,11 +115,11 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row md:hidden  items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
+          "h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between bg-neutral-100 dark:bg-neutral-800 w-full"
         )}
         {...props}
       >
-        <div className="flex justify-end z-20 w-full">
+        <div className="flex justify-start z-20 w-full">
           <IconMenu2
             className="text-neutral-800 dark:text-neutral-200"
             onClick={() => setOpen(!open)}
@@ -168,8 +168,12 @@ export const SidebarLink = ({
   return (
     <Link
       href={link.href}
-      className={cn(
-        "flex items-center justify-start gap-2  group/sidebar py-2",
+      style={{ 
+        transition: "all 0.3s ease-in-out" 
+      }}
+      className={
+        cn(
+        "flex items-center pl-2 $ justify-start gap-2 group/sidebar py-2 rounded-md",
         className
       )}
       {...props}
