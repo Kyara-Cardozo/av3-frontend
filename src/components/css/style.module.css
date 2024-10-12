@@ -4,82 +4,113 @@
     box-shadow: 1px 0 2px rgba(0, 0, 0, .2);
 }
 
-
-/* From Uiverse.io by juanpabl0svn */ 
-/* The switch - the box around the slider */
+/* From Uiverse.io by andrew-demchenk0 */ 
 .switch {
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
-  cursor: pointer;
+  width: 64px;
+  height: 34px;
+  left: -10px;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
 }
 
-/* The slider */
 .slider {
-  --background: #20262c;
   position: absolute;
   cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--background);
-  transition: 0.5s;
+  background-color: #73C0FC;
+  transition: .4s;
   border-radius: 30px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 1.4em;
-  width: 1.4em;
-  border-radius: 50%;
-  left: 10%;
-  bottom: 15%;
-  box-shadow: inset 8px -4px 0px 0px #ececd9, -4px 1px 4px 0px #dadada;
-  background: var(--background);
-  transition: 0.5s;
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: .4s;
 }
 
-.decoration {
+.sun svg {
   position: absolute;
-  content: "";
-  height: 2px;
-  width: 2px;
-  border-radius: 50%;
-  right: 20%;
-  top: 15%;
-  background: #e5f041e6;
-  backdrop-filter: blur(10px);
-  transition: all 0.5s;
-  box-shadow: -7px 10px 0 #e5f041e6, 8px 15px 0 #e5f041e6, -17px 1px 0 #e5f041e6,
-    -20px 10px 0 #e5f041e6, -7px 23px 0 #e5f041e6, -15px 25px 0 #e5f041e6;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
-input:checked ~ .decoration {
-  transform: translateX(-20px);
-  width: 10px;
-  height: 10px;
-  background: white;
-  box-shadow: -12px 0 0 white, -6px 0 0 1.6px white, 5px 15px 0 1px white,
-    1px 17px 0 white, 10px 17px 0 white;
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
-input:checked + .slider {
-  background-color: #5494de;
+/* .switch:hover */.sun svg {
+  animation: rotate 15s linear infinite;
 }
 
-input:checked + .slider:before {
-  transform: translateX(100%);
-  box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
+@keyframes rotate {
+ 
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
-  
+
+/* .switch:hover */.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}

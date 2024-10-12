@@ -22,7 +22,6 @@ export default function Home() {
         input.blur();
         setPlaceholderVisible(false);
         setOpen(false);
-
     };
 
     return (
@@ -86,7 +85,7 @@ export default function Home() {
                         
                     </div>
 
-                    <div className="flex flex-col items-start gap-2 pl-[8px] mb-5">
+                    <div className="flex flex-col items-start gap-2 pl-[8px] mb-3">
                         <SidebarLink
                             link={{
                                 label: "Sair",
